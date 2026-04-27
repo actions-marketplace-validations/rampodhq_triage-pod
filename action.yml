@@ -1,0 +1,34 @@
+name: TriagePod
+description: GitHub-native issue triage assistant for duplicate, missing-info, label, and routing suggestions.
+author: Rampod
+inputs:
+  github_token:
+    description: GitHub token with issue read, comment write, and optional label write permissions.
+    required: true
+  config_path:
+    description: Repository-relative path to the TriagePod YAML config.
+    required: false
+    default: .github/triagepod.yml
+  dry_run:
+    description: Override config dry-run mode.
+    required: false
+    default: ""
+  log_level:
+    description: Structured log level.
+    required: false
+    default: INFO
+  ai_provider:
+    description: Optional AI provider name.
+    required: false
+    default: ""
+  ai_model:
+    description: Optional AI model name.
+    required: false
+    default: ""
+  ai_api_key:
+    description: Optional AI API key.
+    required: false
+    default: ""
+runs:
+  using: docker
+  image: Dockerfile

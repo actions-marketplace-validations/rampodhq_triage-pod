@@ -1,0 +1,17 @@
+version: 1
+
+required_fields:
+  - reproduction_steps
+  - expected_behavior
+  - actual_behavior
+  - version
+  - environment
+  - request_id
+
+discussion_routing:
+  enabled: true
+  question_patterns:
+    - "how do i"
+    - "authentication question"
+    - "api usage"
+  category: "Q&A"

@@ -1,0 +1,14 @@
+version: 1
+
+required_fields:
+  - affected_page
+  - expected_behavior
+  - actual_behavior
+
+labels:
+  bug: ["bug"]
+  feature: ["enhancement"]
+  docs: ["documentation"]
+  support: ["support"]
+  needs_info: ["needs-info"]
+  duplicate: ["duplicate"]

@@ -1,0 +1,25 @@
+{
+  "action": "opened",
+  "repository": {
+    "name": "demo",
+    "full_name": "octo/demo",
+    "default_branch": "main",
+    "has_discussions": true,
+    "owner": {
+      "login": "octo"
+    }
+  },
+  "issue": {
+    "number": 42,
+    "title": "CLI crashes when running init",
+    "body": "The CLI crashes during init. reproduction steps: run triagepod init. expected behavior: project is created. actual behavior: exception is raised. version: 1.0. environment: macOS.",
+    "url": "https://api.github.com/repos/octo/demo/issues/42",
+    "html_url": "https://github.com/octo/demo/issues/42",
+    "state": "open",
+    "labels": [],
+    "user": {
+      "login": "contributor"
+    },
+    "created_at": "2026-04-27T09:00:00Z"
+  }
+}

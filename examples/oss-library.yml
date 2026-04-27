@@ -1,0 +1,27 @@
+version: 1
+
+features:
+  duplicate_detection: true
+  missing_info_check: true
+  label_suggestions: true
+  discussion_routing: true
+
+required_fields:
+  - reproduction_steps
+  - expected_behavior
+  - actual_behavior
+  - version
+  - environment
+
+labels:
+  bug: ["bug"]
+  feature: ["enhancement"]
+  docs: ["documentation"]
+  support: ["support"]
+  needs_info: ["needs-info"]
+  duplicate: ["duplicate"]
+
+automation:
+  auto_comment: true
+  auto_apply_labels: false
+  dry_run: true

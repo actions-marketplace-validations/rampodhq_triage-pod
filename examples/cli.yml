@@ -1,0 +1,17 @@
+version: 1
+
+required_fields:
+  - reproduction_steps
+  - expected_behavior
+  - actual_behavior
+  - cli_version
+  - operating_system
+  - terminal
+
+labels:
+  bug: ["bug"]
+  feature: ["enhancement"]
+  docs: ["documentation"]
+  support: ["question"]
+  needs_info: ["needs-info"]
+  duplicate: ["duplicate"]

@@ -1,5 +1,5 @@
-name: TriagePod
-description: GitHub-native issue triage assistant for duplicate, missing-info, label, and routing suggestions.
+name: TriagePod Issue Triage
+description: GitHub-native issue triage assistant for duplicate detection, missing-info checks, labels, and routing suggestions.
 author: Rampod
 inputs:
   github_token:
@@ -32,3 +32,6 @@ inputs:
 runs:
   using: docker
   image: Dockerfile
+branding:
+  icon: activity
+  color: blue

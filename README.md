@@ -2,6 +2,35 @@
 
 TriagePod is a GitHub-native issue triage assistant. Version 1 ships as a Docker-based GitHub Action that analyzes newly opened issues and produces professional, configurable intake guidance.
 
+## Install from GitHub Actions
+
+Reference the published action from another repository workflow:
+
+```yaml
+name: TriagePod
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: your-user-or-org/triage-pod@v0.1.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          config_path: .github/triagepod.yml
+          dry_run: "true"
+```
+
+Marketplace publication is done from the repository release flow on GitHub after the repository is public and the root `action.yml` is valid.
+
 ## V1 capabilities
 
 - Duplicate suggestions from open issues.
@@ -35,6 +64,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           config_path: .github/triagepod.yml
 ```
+
+Use `./` only when testing inside this repository. Use `your-user-or-org/triage-pod@<tag>` from other repositories.
 
 ## Local development
 
